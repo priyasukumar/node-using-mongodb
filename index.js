@@ -12,8 +12,6 @@ mongoose.connect('mongodb://localhost:27017/productsdb', {
     useUnifiedTopology: true
     });
 
-//Get the default connection
-var productsdb  = mongoose.connection;
 // bodyparser setup
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); 
