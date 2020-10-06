@@ -5,7 +5,7 @@ describe("Mongo tests @mongo", function () {
     it("Mongoose promise", function (done) {
         try {
             expect(fs.readFileSync('index.js').toString())
-            .to.contain("mongoose.Promise = global.Promise;")
+            .to.contain("   ")
             done();
         }
         catch(error) {
