@@ -1,13 +1,15 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+
 const app = express();
 const PORT = 4000;
-var mongoDB = 'mongodb://127.0.0.1:27017/productsdb';
+ 
+
 mongoose.Promise=global.Promise;
-mongoose.connect(mongoDB, 
-    {useNewUrlParser: true, 
-        useUnifiedTopology: true
+mongoose.connect('mongodb://localhost:27017/productsdb', {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true
     });
 
 //Get the default connection
