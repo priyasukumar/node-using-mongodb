@@ -16,7 +16,8 @@ describe('Creating documents', () => {
 
     it('creates controler for route @controller-create', (done) => {
         try {
-            expect(fs.readFileSync('src/controllers/controllers.js').toString())
+            var a=fs.readFileSync('src/controllers/controllers.js').toString();
+            expect(a)
             .to.contain("export const addnewProduct = (req, res) => {")
             expect(fs.readFileSync('src/controllers/controllers.js').toString())
                 .to.contain("newProduct.save((err, Product) => {")
